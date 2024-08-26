@@ -1,4 +1,4 @@
-import { v4 as uniqueId } from 'uuid';
+
 import { useEffect, useState } from 'react';
 import './Filters.css';
 
@@ -25,7 +25,7 @@ const Filters = ({ setFilteredData, data, fields }) => {
     }
 
     return fields.map((field) => (
-      <label key={uniqueId()} className="filters__label">
+      <label key={field} className="filters__label">
         {field}
         <input
           onChange={(e) =>

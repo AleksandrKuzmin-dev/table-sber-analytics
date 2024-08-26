@@ -1,4 +1,3 @@
-import { v4 as uniqueId } from 'uuid';
 import { useMemo, useState } from 'react';
 
 import { sortData } from './utils';
@@ -42,7 +41,7 @@ const ViewingTable = ({ data, fields }) => {
         <thead>
           <tr>
             {fields.map((field) => (
-              <th key={uniqueId()} onClick={() => changeSortConfig(field)}>
+              <th key={field} onClick={() => changeSortConfig(field)}>
                 {field}
                 {sortConfig.key === field
                   ? sortConfig.direction === 'ascending'
@@ -54,10 +53,12 @@ const ViewingTable = ({ data, fields }) => {
           </tr>
         </thead>
         <tbody>
-          {filteredData.map((item) => (
-            <tr key={uniqueId()}>
-              {fields.map((field) => (
-                <td key={uniqueId()}>{item[field]}</td>
+          {filteredData.map((item, index) => (
+            <tr key={`tr-${item['trans_id'] || index}`}>
+              {fields.map((field, indexField) => (
+                <td key={`td-${field}-${item['trans_id'] || indexField}`}>
+                  {item[field]}
+                </td>
               ))}
             </tr>
           ))}
