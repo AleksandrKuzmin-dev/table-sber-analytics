@@ -1,0 +1,42 @@
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters__wrapper {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.filters__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.filters__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 15px;
+}
+
+.filters__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters__button-hide {
+    background: unset;
+    border: unset;
+    padding: 5px 10px;
+    background: #f3f3f3;
+    cursor: pointer;
+}
+
+.filters__label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 14px;    
+}

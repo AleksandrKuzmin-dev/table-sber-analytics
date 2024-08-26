@@ -1,0 +1,10 @@
+.uploading-files__title {
+  font-size: 18px;
+  margin-bottom: 7px;
+  font-weight: 500;
+}
+
+.uploading-files__type-error {
+  color: red;
+  padding-top: 5px;
+}
