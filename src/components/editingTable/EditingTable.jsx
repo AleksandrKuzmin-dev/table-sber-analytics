@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Workbook } from '@fortune-sheet/react';
-import cloneDeep from 'lodash/cloneDeep';
 
 import '@fortune-sheet/react/dist/index.css';
 
@@ -58,7 +57,7 @@ const EditingTable = ({ data, fields, setData }) => {
 
       if (operation === 'replace' || operation === 'remove') {
         setData((prevData) => {
-          let newData = cloneDeep(prevData);
+          let newData = [...prevData];
 
           if (!newData[row - 1]) {
             newData[row - 1] = {};
@@ -67,7 +66,10 @@ const EditingTable = ({ data, fields, setData }) => {
             });
           }
 
-          newData[row - 1][fields[column]] = value;
+          newData[row - 1] = {
+            ...newData[row - 1],
+            [fields[column]]: value,
+          };
 
           return newData;
         });
