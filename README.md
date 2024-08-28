@@ -1,4 +1,4 @@
-# ERD редактора на React
+# Таблица для работы с данными из JSON на React
 ![Static Badge](https://img.shields.io/badge/React-blue)
 ![Static Badge](https://img.shields.io/badge/JavaScript-yellow)
 ![Static Badge](https://img.shields.io/badge/HTML-orange)
